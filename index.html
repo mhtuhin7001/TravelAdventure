@@ -4,9 +4,204 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Travel Adventure</title>
-		<link rel="stylesheet" href="input.css" />
+		<link rel="shortcut icon" href="images/Logo.png" type="image/x-icon" />
+		<!-- Main Style -->
+		<link rel="stylesheet" href="css/input.css" />
 	</head>
-	<body>
-		<h1>Hello World!</h1>
+
+	<body class="text-sm bg-black text-white">
+		<!-- Header -->
+		<header class="fixed w-full z-[999]">
+			<div
+				class="container flex mx-auto p-2.5 items-center md:px-3.5 md:justify-between"
+			>
+				<div class="site-logo me-auto md:m-0">
+					<a href="index.html"
+						><img
+							src="images/Logo.png"
+							class="w-12 md:w-16"
+							alt="Site Logo"
+					/></a>
+				</div>
+				<nav>
+					<ul
+						id="main-menu"
+						class="absolute hidden w-full text-center py-2.5 top-16 right-0 left-0 md:static md:w-auto md:flex md:justify-center md:gap-5"
+					>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2"
+						>
+							<a href="facebook.com" class="block">Adventure</a>
+						</li>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2"
+						>
+							<a href="facebook.com" class="block">About</a>
+						</li>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2"
+						>
+							<a href="facebook.com" class="block">Gallary</a>
+						</li>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2"
+						>
+							<a href="facebook.com" class="block">Book Now</a>
+						</li>
+					</ul>
+				</nav>
+				<form action="" role="search" class="relative">
+					<button
+						type="button"
+						class="peer absolute my-auto cursor-pointer top-0 right-0 bottom-0"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-5 md:size-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+							/>
+						</svg>
+					</button>
+					<input
+						type="text"
+						class="w-0 h-10 border-b-2 border-b-gray-400 transition-all duration-500 placeholder:font-semibold placeholder:text-gray-400 peer-focus:w-48 focus:w-48 focus:outline-0"
+						placeholder="Type to Search..."
+					/>
+				</form>
+				<button id="main-menu-btn" class="ms-2.5 md:hidden">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-6 transform-[rotate(180deg)]"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+						/>
+					</svg>
+				</button>
+			</div>
+		</header>
+
+		<!-- Home Hero Section -->
+		<section id="home-hero-slider">
+			<div class="hero-slider relative overflow-hidden w-screen h-screen">
+				<div class="hero-slide-lists">
+					<div
+						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 active"
+					>
+						<div
+							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl"
+							style="--url: url('images/home-slider-1.jpg')"
+						></div>
+						<div class="slide-content">
+							<h2>SLIDER IMAGE MAGIC</h2>
+							<p>
+								Nulla magna irure incididunt irure nisi laboris
+								adipisicing adipisicing ad aliquip exercitation
+								sit duis.
+							</p>
+							<p>
+								Ex irure minim eiusmod tempor cillum consectetur
+								ullamco.
+							</p>
+						</div>
+					</div>
+					<div
+						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0"
+					>
+						<div
+							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl"
+							style="--url: url('images/home-slider-2.jpg')"
+						></div>
+						<div class="slide-content">
+							<h2>SLIDER IMAGE MAGIC</h2>
+							<p>
+								Nulla magna irure incididunt irure nisi laboris
+								adipisicing adipisicing ad aliquip exercitation
+								sit duis.
+							</p>
+							<p>
+								Ex irure minim eiusmod tempor cillum consectetur
+								ullamco.
+							</p>
+						</div>
+					</div>
+					<div
+						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0"
+					>
+						<div
+							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl"
+							style="--url: url('images/home-slider-3.jpg')"
+						></div>
+						<div class="slide-content">
+							<h2>SLIDER IMAGE MAGIC</h2>
+							<p>
+								Nulla magna irure incididunt irure nisi laboris
+								adipisicing adipisicing ad aliquip exercitation
+								sit duis.
+							</p>
+							<p>
+								Ex irure minim eiusmod tempor cillum consectetur
+								ullamco.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="hero-slider-nav absolute w-[90vw] max-w-[1200px] flex justify-between left-1/2 bottom-8 -translate-x-1/2"
+				>
+					<button id="slide-prev" class="cursor-pointer">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+							/>
+						</svg>
+					</button>
+					<button id="slide-next" class="cursor-pointer">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- jQuery Script -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<!-- Main Script -->
+		<script src="js/script.js"></script>
 	</body>
 </html>
