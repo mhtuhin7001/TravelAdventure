@@ -13,47 +13,20 @@
 		<!-- Header -->
 		<header class="fixed w-full z-[999]">
 			<div
-				class="container flex mx-auto p-2.5 items-center md:px-3.5 md:justify-between"
+				class="container relative flex mx-auto p-2.5 items-center md:px-3.5 md:justify-between"
 			>
-				<div class="site-logo me-auto md:m-0">
+				<div class="me-auto md:m-0">
 					<a href="index.html"
 						><img
 							src="images/Logo.png"
-							class="w-12 md:w-16"
+							class="w-13 md:w-16"
 							alt="Site Logo"
 					/></a>
 				</div>
-				<nav>
-					<ul
-						id="main-menu"
-						class="absolute hidden w-full text-center py-2.5 top-16 right-0 left-0 md:static md:w-auto md:flex md:justify-center md:gap-5"
-					>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2"
-						>
-							<a href="facebook.com" class="block">Adventure</a>
-						</li>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2"
-						>
-							<a href="facebook.com" class="block">About</a>
-						</li>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2"
-						>
-							<a href="facebook.com" class="block">Gallary</a>
-						</li>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2"
-						>
-							<a href="facebook.com" class="block">Book Now</a>
-						</li>
-					</ul>
-				</nav>
 				<form action="" role="search" class="relative">
 					<button
 						type="button"
-						class="peer absolute my-auto cursor-pointer top-0 right-0 bottom-0"
+						class="peer absolute my-auto cursor-pointer top-0 right-0 bottom-0 z-10"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +34,7 @@
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="size-5 md:size-6"
+							class="size-7"
 						>
 							<path
 								stroke-linecap="round"
@@ -72,26 +45,51 @@
 					</button>
 					<input
 						type="text"
-						class="w-0 h-10 border-b-2 border-b-gray-400 transition-all duration-500 placeholder:font-semibold placeholder:text-gray-400 peer-focus:w-48 focus:w-48 focus:outline-0"
+						class="w-0 h-10 px-1.5 rounded-md transition-all duration-500 placeholder:font-semibold placeholder:text-white peer-focus:w-48 peer-focus:border-b-2 peer-focus:border-b-white peer-focus:backdrop-blur-xs focus:w-48 focus:outline-0 focus:border-b-2 focus:border-b-white focus:backdrop-blur-xs"
 						placeholder="Type to Search..."
 					/>
 				</form>
-				<button id="main-menu-btn" class="ms-2.5 md:hidden">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="size-6 transform-[rotate(180deg)]"
+				<div
+					id="mobile-btn"
+					class="size-7 flex flex-col justify-center items-end gap-1.5 ms-2.5 cursor-pointer transition-all duration-500 ease-in-out md:hidden"
+				>
+					<div
+						class="w-3 h-0.5 rounded-xs bg-white transition-all duration-500 ease-[cubic-bezier(0.075, 0.82, 0.165, 1)]"
+					></div>
+					<div
+						class="w-7 h-0.5 rounded-xs bg-white transition-all duration-500 ease-[cubic-bezier(0.075, 0.82, 0.165, 1)]"
+					></div>
+					<div
+						class="w-5 h-0.5 rounded-xs bg-white transition-all duration-500 ease-[cubic-bezier(0.075, 0.82, 0.165, 1)]"
+					></div>
+				</div>
+				<nav class="w-screen">
+					<ul
+						id="main-menu"
+						class="text-center py-2.5 bg-[linear-gradient(to_right,#0004,#0004)] backdrop-blur-xs top-16 right-0 left-0 md:static md:w-auto md:flex md:justify-center md:gap-5"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
-						/>
-					</svg>
-				</button>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2 hover:transition-all hover:duration-300 hover:backdrop-blur-lg"
+						>
+							<a href="facebook.com" class="block">Adventure</a>
+						</li>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2 transition-all duration-300 hover:backdrop-blur-lg"
+						>
+							<a href="facebook.com" class="block">About</a>
+						</li>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2 transition-all duration-300 hover:backdrop-blur-lg"
+						>
+							<a href="facebook.com" class="block">Gallary</a>
+						</li>
+						<li
+							class="font-poppins uppercase text-sm font-semibold py-2 transition-all duration-300 hover:backdrop-blur-lg"
+						>
+							<a href="facebook.com" class="block">Book Now</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 

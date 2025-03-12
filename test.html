@@ -12,85 +12,64 @@
 			referrerpolicy="no-referrer"
 		/>
 		<style>
-			* {
-				box-sizing: border-box;
-			}
-			body {
-				margin: 0px;
-				padding: 0px;
-				width: 100vw;
-				height: 100vh;
+			.burger {
+				width: 55px;
+				height: 55px;
+				border-radius: 10px;
+				background: white;
+				box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px,
+					rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+				cursor: pointer;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				background-color: #130f40;
-				font-family: "Lato" !important;
+				padding: 5px;
+				transition: all 0.5s ease;
+				margin: 1em;
 			}
-			.search-box {
-				width: fit-content;
-				height: fit-content;
-				position: relative;
+			.burger:hover {
+				background: rgb(56 56 56);
 			}
-			.input-search {
-				height: 50px;
-				width: 50px;
-				border-style: none;
-				padding: 10px;
-				font-size: 18px;
-				letter-spacing: 2px;
-				outline: none;
-				border-radius: 25px;
-				transition: all 0.5s ease-in-out;
-				background-color: #22a6b3;
-				padding-right: 40px;
-				color: #fff;
+			.burger-strip {
+				transition: all 0.5s ease;
 			}
-			.input-search::placeholder {
-				color: rgba(255, 255, 255, 0.5);
-				font-size: 18px;
-				letter-spacing: 2px;
-				font-weight: 100;
+			.strip div {
+				height: 3px;
+				border-radius: 2px;
+				background: rgb(56 56 56);
+				margin: 10px;
+				transition: all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1);
+				width: 40px;
 			}
-			.btn-search {
-				width: 50px;
-				height: 50px;
-				border-style: none;
-				font-size: 20px;
-				font-weight: bold;
-				outline: none;
-				cursor: pointer;
-				border-radius: 50%;
-				position: absolute;
-				right: 0px;
-				color: #ffffff;
-				background-color: transparent;
-				pointer-events: painted;
+			.burger:hover .strip div {
+				background: white;
 			}
-			.btn-search:focus ~ .input-search {
-				width: 300px;
-				border-radius: 0px;
-				background-color: transparent;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-				transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+			/* BURGER 1 */
+			.burger-strip div:first-child {
+				width: 16px;
 			}
-			.input-search:focus {
-				width: 300px;
-				border-radius: 0px;
-				background-color: transparent;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-				transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+			.burger-strip div:last-child {
+				width: 28px;
+			}
+			.burger:hover .burger-strip div:first-child {
+				transform: rotate(45deg) translateY(1px) translateX(5px);
+			}
+			.burger:hover .burger-strip div:nth-child(2) {
+				transform: rotate(-45deg);
+			}
+			.burger:hover .burger-strip div:last-child {
+				transform: rotate(45deg) translateY(-13px) translateX(2px);
 			}
 		</style>
 	</head>
 
 	<body>
-		<form action="" role="search" class="search-box">
-			<button class="btn-search"><i class="fas fa-search"></i></button>
-			<input
-				type="text"
-				class="input-search"
-				placeholder="Type to Search..."
-			/>
-		</form>
+		<div class="burger">
+			<div class="strip burger-strip">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 	</body>
 </html>

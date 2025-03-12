@@ -1,9 +1,11 @@
 // Mobile Menu
 $(document).ready(function () {
 	// When the menu button is clicked
-	$("#main-menu-btn").on("click", function () {
+	$("#mobile-btn").on("click", function () {
+		// Toggle the "active" class on the button
+		$("#mobile-btn").toggleClass("active");
 		// Toggle the "hidden" class on the menu
-		$("#main-menu").toggleClass("hidden");
+		$("#main-menu").toggleClass("hidden max-h-screen");
 	});
 });
 

@@ -15,6 +15,17 @@
 	--diameter: 1432px;
 }
 
+/* Header */
+#mobile-btn.active div:first-child {
+	transform: rotate(45deg) translateY(11px) translateX(-8px);
+}
+#mobile-btn.active div:nth-child(2) {
+	@apply -rotate-45;
+}
+#mobile-btn.active div:last-child {
+	transform: rotate(45deg) translateY(-3px) translateX(-4px);
+}
+
 /* Home Hero Section */
 /* Hero Slider */
 .hero-slider .hero-slide-lists .hero-slide .slide-content {
