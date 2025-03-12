@@ -1,12 +1,31 @@
 // Mobile Menu
 $(document).ready(function () {
-	// When the menu button is clicked
 	$("#mobile-btn").on("click", function () {
-		// Toggle the "active" class on the button
+		$("header").toggleClass("h-screen bg-[#0008] backdrop-blur-sm");
 		$("#mobile-btn").toggleClass("active");
-		// Toggle the "hidden" class on the menu
-		$("#main-menu").toggleClass("hidden max-h-screen");
+		$("#main-menu").toggleClass("max-h-screen");
 	});
+});
+
+// Menu Scroll
+$(window).on("scroll", function () {
+	let scrollTop = $(this).scrollTop();
+	let $hdr = $("header");
+	let $hdrLg = $("header .site-logo img");
+	let $hdrWrp = $("header .container");
+	if (scrollTop > 100) {
+		$hdr.removeClass("backdrop-blur-none").addClass(
+			"backdrop-blur-xs md:bg-[#0008]"
+		);
+		$hdrWrp.removeClass("px-2.5 py-2").addClass("px-2 py-1");
+		$hdrLg.removeClass("h-14").addClass("h-12");
+	} else {
+		$hdr.removeClass("backdrop-blur-xs md:bg-[#0008]").addClass(
+			"backdrop-blur-none"
+		);
+		$hdrWrp.removeClass("px-2 py-1").addClass("px-2.5 py-2");
+		$hdrLg.removeClass("h-12").addClass("h-14");
+	}
 });
 
 // Hero Slider

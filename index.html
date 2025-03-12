@@ -9,21 +9,19 @@
 		<link rel="stylesheet" href="css/input.css" />
 	</head>
 
-	<body class="bg-black text-white">
+	<body class="overflow-x-hidden bg-black text-white">
 		<!-- Header -->
-		<header class="fixed w-full z-[999]">
+		<header class="fixed w-full h-14 transition-all duration-500 z-[999]">
 			<div
-				class="container relative flex mx-auto p-2.5 items-center md:px-3.5 md:justify-between"
+				class="container flex flex-wrap items-center mx-auto px-2.5 py-2 transition-all duration-500 md:px-3.5 md:justify-between"
 			>
-				<div class="me-auto md:m-0">
-					<a href="index.html"
-						><img
-							src="images/Logo.png"
-							class="w-13 md:w-16"
-							alt="Site Logo"
-					/></a>
-				</div>
-				<form action="" role="search" class="relative">
+				<a href="index.html" class="site-logo me-auto md:me-0"
+					><img
+						src="images/Logo.png"
+						class="h-14 transition-all duration-500"
+						alt="Site Logo"
+				/></a>
+				<form action="" role="search" class="relative md:order-2">
 					<button
 						type="button"
 						class="peer absolute my-auto cursor-pointer top-0 right-0 bottom-0 z-10"
@@ -63,33 +61,23 @@
 						class="w-5 h-0.5 rounded-xs bg-white transition-all duration-500 ease-[cubic-bezier(0.075, 0.82, 0.165, 1)]"
 					></div>
 				</div>
-				<nav class="w-screen">
-					<ul
-						id="main-menu"
-						class="text-center py-2.5 bg-[linear-gradient(to_right,#0004,#0004)] backdrop-blur-xs top-16 right-0 left-0 md:static md:w-auto md:flex md:justify-center md:gap-5"
-					>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2 hover:transition-all hover:duration-300 hover:backdrop-blur-lg"
-						>
-							<a href="facebook.com" class="block">Adventure</a>
-						</li>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2 transition-all duration-300 hover:backdrop-blur-lg"
-						>
-							<a href="facebook.com" class="block">About</a>
-						</li>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2 transition-all duration-300 hover:backdrop-blur-lg"
-						>
-							<a href="facebook.com" class="block">Gallary</a>
-						</li>
-						<li
-							class="font-poppins uppercase text-sm font-semibold py-2 transition-all duration-300 hover:backdrop-blur-lg"
-						>
-							<a href="facebook.com" class="block">Book Now</a>
-						</li>
-					</ul>
-				</nav>
+				<ul
+					id="main-menu"
+					class="basis-full overflow-hidden max-h-0 text-center pt-2.5 transition-all duration-400 md:basis-auto md:max-h-max md:flex md:justify-center md:gap-6 md:pt-0"
+				>
+					<li class="menu-item">
+						<a href="facebook.com">Adventure</a>
+					</li>
+					<li class="menu-item">
+						<a href="facebook.com">About</a>
+					</li>
+					<li class="menu-item">
+						<a href="facebook.com">Gallary</a>
+					</li>
+					<li class="menu-item">
+						<a href="facebook.com">Book Now</a>
+					</li>
+				</ul>
 			</div>
 		</header>
 
@@ -101,19 +89,13 @@
 				<div
 					class="hero-slide-lists after:content-[''] after:absolute after:w-screen after:max-w-5xl after:h-3/4 after:bg-[url(/images/home-slider-model.png)] after:bg-cover after:pointer-events-none after:bg-top after:bottom-0 after:left-1/2 after:animate-showmodel"
 				>
-					<div
-						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto active"
-					>
+					<div class="hero-slide active">
 						<div
-							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000"
+							class="slider-image"
 							style="--url: url('images/home-slider-1.jpg')"
 						></div>
-						<div
-							class="slide-content absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] md:top-1/4 lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5"
-						>
-							<h2
-								class="text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em]"
-							>
+						<div class="slide-content">
+							<h2 class="slide-content-title">
 								SLIDER IMAGE MAGIC
 							</h2>
 							<p class="text-sm md:text-base lg:text-lg">
@@ -121,27 +103,19 @@
 								adipisicing adipisicing ad aliquip exercitation
 								sit duis.
 							</p>
-							<p
-								class="text-sm flex items-end pb-6 md:text-base lg:text-lg"
-							>
+							<p class="slide-content-subtitle">
 								Ex irure minim eiusmod tempor cillum consectetur
 								ullamco.
 							</p>
 						</div>
 					</div>
-					<div
-						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto"
-					>
+					<div class="hero-slide">
 						<div
-							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000"
+							class="slider-image"
 							style="--url: url('images/home-slider-2.jpg')"
 						></div>
-						<div
-							class="slide-content absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5"
-						>
-							<h2
-								class="text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em]"
-							>
+						<div class="slide-content">
+							<h2 class="slide-content-title">
 								SLIDER IMAGE MAGIC
 							</h2>
 							<p class="text-sm md:text-base lg:text-lg">
@@ -149,27 +123,19 @@
 								adipisicing adipisicing ad aliquip exercitation
 								sit duis.
 							</p>
-							<p
-								class="text-sm flex items-end pb-6 md:text-base lg:text-lg"
-							>
+							<p class="slide-content-subtitle">
 								Ex irure minim eiusmod tempor cillum consectetur
 								ullamco.
 							</p>
 						</div>
 					</div>
-					<div
-						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto"
-					>
+					<div class="hero-slide">
 						<div
-							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000"
+							class="slider-image"
 							style="--url: url('images/home-slider-3.jpg')"
 						></div>
-						<div
-							class="slide-content absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5"
-						>
-							<h2
-								class="text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em]"
-							>
+						<div class="slide-content">
+							<h2 class="slide-content-title">
 								SLIDER IMAGE MAGIC
 							</h2>
 							<p class="text-sm md:text-base lg:text-lg">
@@ -177,9 +143,7 @@
 								adipisicing adipisicing ad aliquip exercitation
 								sit duis.
 							</p>
-							<p
-								class="text-sm flex items-end pb-6 md:text-base lg:text-lg"
-							>
+							<p class="slide-content-subtitle">
 								Ex irure minim eiusmod tempor cillum consectetur
 								ullamco.
 							</p>
@@ -232,6 +196,259 @@
 			</div>
 		</section>
 
+		<section>
+			<div class="container">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+				corporis impedit dolor et sit aliquam odit voluptatem distinctio
+				veniam at consequatur deleniti in voluptas beatae doloribus
+				maxime quam, voluptates tempora, repudiandae porro iure dolorum.
+				Alias laborum, quas provident delectus commodi dolores officiis,
+				nobis, repellat omnis itaque vitae. Quidem magni aspernatur
+				quasi sit ut eligendi veritatis unde est perspiciatis fuga
+				repellendus natus, nihil harum quisquam libero id itaque numquam
+				delectus expedita autem nostrum possimus at. Cum enim nesciunt
+				aliquid eligendi a, omnis corporis culpa fugit quis ex harum
+				voluptatibus labore. Commodi quasi ipsa, tenetur atque eius
+				repellat veniam quibusdam voluptates perferendis distinctio
+				incidunt nobis vitae quas maxime amet magni placeat excepturi
+				perspiciatis laudantium id quia? Fuga, rem explicabo obcaecati
+				maxime recusandae tempora sunt laudantium amet temporibus
+				numquam id? Incidunt saepe at ea omnis tempora exercitationem
+				esse atque ipsum dolorem error, alias adipisci itaque et ex
+				consequuntur. Excepturi perferendis temporibus, a ipsa eveniet
+				unde rem, at, magnam animi reiciendis sapiente voluptatum.
+				Perferendis quo qui saepe repellendus maxime in nostrum labore,
+				amet optio incidunt laborum debitis ad magnam autem dolorem nam
+				nulla expedita? Architecto doloribus quibusdam similique at
+				harum ipsam cumque tenetur nulla, magnam qui earum rem amet eos
+				molestias? Maiores veniam laborum accusantium est repellendus
+				officia voluptatum minus harum sed voluptates dolorem cum cumque
+				laboriosam veritatis, quas amet accusamus sunt excepturi
+				aliquam, nemo provident unde architecto. Id maxime quia enim in
+				quas sunt temporibus omnis quaerat. Maiores numquam pariatur
+				velit ad accusamus iste dignissimos est autem quia praesentium
+				quos totam magni repudiandae tempora asperiores vitae eveniet
+				sint omnis ipsa, suscipit laborum sequi error rerum? Explicabo
+				molestiae aliquam obcaecati velit, enim quae consectetur numquam
+				provident, dolorem veritatis neque mollitia dolor. Nostrum quam
+				maiores magnam eaque asperiores fuga eius nam vero nemo deserunt
+				quod, officiis expedita recusandae accusamus ex illum tenetur
+				facere ipsam dignissimos non alias consectetur accusantium ea?
+				Nisi, quo suscipit quae repudiandae officia temporibus iure cum
+				laudantium eos libero dolor magni error quidem commodi sequi
+				molestiae recusandae odit, nihil tempore ut itaque incidunt
+				corrupti voluptate. Consequuntur voluptas quo veritatis eos
+				repudiandae, laborum nostrum perspiciatis eveniet minima maxime,
+				obcaecati soluta aspernatur vero libero impedit fugiat iure sed
+				adipisci beatae voluptate necessitatibus. Ipsam, nemo itaque,
+				praesentium qui sapiente provident exercitationem ea iste quod,
+				corrupti fuga nisi vero reiciendis at illum ad soluta! Cumque
+				veritatis modi voluptas sunt alias quam aliquam, culpa
+				perferendis, non delectus atque voluptatibus animi totam soluta
+				distinctio iste voluptatum, quos optio. Error asperiores minus
+				soluta, labore praesentium iusto ipsa vitae recusandae porro
+				nisi consequatur? Aspernatur commodi ullam aliquam eum eius
+				ducimus nesciunt optio mollitia cum voluptatum nulla quas
+				provident saepe animi dolorum nihil cumque earum repudiandae
+				obcaecati, laudantium ratione. Sequi pariatur perspiciatis
+				placeat laudantium harum fugiat, voluptas iste numquam inventore
+				a cum ut quam quia in nobis ratione suscipit doloribus itaque
+				soluta, omnis eligendi nemo, dolor at velit! Reprehenderit nisi
+				placeat nobis cum sit officiis earum repudiandae aliquid saepe
+				explicabo maiores excepturi, exercitationem quae quam! Sunt
+				voluptas, officiis facere fugiat ab dolore expedita incidunt
+				provident placeat unde quod, voluptatibus ad tempore beatae, ex
+				dignissimos saepe impedit veniam illo! Reiciendis, possimus? Ut
+				provident nesciunt rem, nihil possimus quod ducimus incidunt
+				unde accusantium fuga veniam mollitia magni itaque quaerat
+				corporis esse molestias beatae voluptatum, reiciendis
+				consectetur praesentium commodi eius. Modi ex repellat adipisci
+				vero facere amet eveniet, cumque molestiae quae iure obcaecati
+				magni placeat blanditiis qui architecto quaerat eos ad itaque
+				tempore ab aperiam! Eveniet, placeat numquam ea nulla similique
+				possimus quas ratione facere, a tempora saepe delectus pariatur
+				eligendi quisquam minima, totam ullam quasi expedita est quaerat
+				dolores accusamus voluptatibus! Earum accusantium expedita
+				consequatur consequuntur necessitatibus aspernatur autem
+				officiis, et excepturi voluptatibus distinctio repudiandae
+				saepe! Minus facilis nisi veritatis id voluptates rerum,
+				cupiditate itaque expedita officia ex accusantium dolore ea
+				consequatur suscipit eos quo commodi alias numquam quod possimus
+				iure veniam corporis. Doloremque laboriosam assumenda
+				praesentium, animi quae nesciunt sed distinctio facilis porro
+				cumque dolorem reiciendis voluptate commodi debitis facere a
+				veniam laborum non excepturi repellendus eos magnam similique
+				perferendis. Quod suscipit accusamus, ad ut saepe provident
+				facilis magni ratione vitae, harum at fugit. Iure doloribus
+				aliquam natus, qui labore dicta pariatur esse ad dolorum,
+				eligendi cumque numquam! Cum soluta exercitationem fugiat
+				tenetur sint ipsum molestiae, veritatis omnis animi magni
+				consectetur dolor nihil cupiditate deleniti eius! Deserunt
+				accusantium possimus sunt sit incidunt harum, quaerat recusandae
+				ducimus, soluta animi mollitia voluptatibus culpa velit labore
+				tenetur reprehenderit consequuntur eligendi sint vero quam
+				reiciendis doloremque. Consequatur velit eum natus pariatur
+				alias quibusdam est voluptatibus fugit odio tempore cupiditate
+				nostrum assumenda, cumque repellat, earum dolore illum sapiente
+				architecto! Perspiciatis recusandae est ad nesciunt corporis
+				consequuntur praesentium quos consectetur quia fugit quod vel
+				harum sit repellendus sapiente, illum ipsa rerum. Tempora unde
+				cupiditate, autem asperiores animi reiciendis, praesentium
+				repellat dolores laboriosam dolorum dolor debitis officia sit
+				officiis laudantium delectus iste accusantium sint deleniti
+				possimus nihil. Animi fuga ad eius quo minima non quisquam
+				fugiat neque repellendus itaque cum, nostrum inventore
+				praesentium provident, dolor accusamus? Expedita amet qui
+				tempora eos molestiae veniam facilis adipisci sint, magni nisi.
+				Aliquam laboriosam totam veniam vero repudiandae repellat dicta
+				repellendus. Ut praesentium rerum sunt fuga, nemo sit voluptatum
+				minima laboriosam facere voluptas doloribus sequi nihil ipsum.
+				Porro nisi libero distinctio, quo nesciunt dignissimos nemo
+				animi ipsa eveniet. Nulla magnam fuga ad consequatur tempore
+				blanditiis. Consectetur consequuntur qui dolor omnis facilis cum
+				incidunt distinctio ab harum, architecto minus deserunt quisquam
+				maiores sint reiciendis velit? Mollitia eveniet repellat fugiat
+				saepe quaerat deserunt doloremque. Recusandae totam temporibus
+				perferendis harum aperiam voluptatibus nisi alias nostrum quam,
+				velit esse molestiae placeat quis. Hic accusantium laudantium
+				aspernatur, iste odit beatae sequi velit esse non ex vel eius
+				impedit sapiente voluptatem deserunt atque ullam nostrum
+				architecto iure ratione quidem. Maiores, possimus non iusto ab
+				nulla quidem error facilis eligendi libero, aut quis expedita?
+				Ipsum ducimus nemo dolorum. Itaque blanditiis atque quos enim
+				eos alias culpa modi architecto vel assumenda? Officia
+				cupiditate sint nostrum perferendis similique vitae omnis
+				expedita labore incidunt. Atque quam expedita voluptatum! Atque,
+				cupiditate culpa, pariatur reprehenderit voluptate hic ducimus
+				quaerat ipsum doloribus quas facilis consequatur eius!
+				Consectetur, cum deserunt ut repellendus vitae eligendi nostrum
+				hic corporis eveniet perferendis dolore explicabo tempora ipsam!
+				Ipsam vel placeat praesentium dolorum sequi rerum nostrum
+				eligendi dolorem officiis corrupti! Incidunt facere, voluptatem
+				earum ab, doloremque magni quae eos alias iusto dolore quisquam.
+				Nostrum velit fugiat molestiae? Debitis, harum? Commodi nobis
+				veniam dicta quod dolorem tempore sit suscipit ipsam nulla, et
+				tempora est facilis, officia provident molestiae quos doloribus
+				reiciendis sapiente corrupti excepturi molestias. Vitae beatae
+				quas aperiam asperiores atque quos sapiente odio ratione
+				voluptas fuga alias pariatur, voluptatem culpa sint at
+				perferendis maiores inventore non nihil modi corrupti doloribus
+				voluptatibus fugit. Incidunt consequatur pariatur illo, ut
+				dignissimos fugiat alias ea, eveniet odit, vitae fuga nam vero.
+				Nostrum aperiam ipsa maiores, corrupti doloribus dolorum optio,
+				unde deleniti recusandae quis libero nisi. Odio quae ut delectus
+				harum recusandae sed itaque animi modi quos omnis adipisci
+				cupiditate aperiam culpa id, blanditiis distinctio iusto nulla
+				vero reprehenderit obcaecati reiciendis. Dignissimos expedita
+				omnis, fuga necessitatibus dolor cumque sit laborum veniam natus
+				eos pariatur inventore porro explicabo magnam nihil laboriosam,
+				animi ut. Vitae quasi ab nulla molestias, laboriosam quos id
+				totam iusto! Facilis eligendi nostrum, eius expedita, mollitia
+				odit tenetur laudantium voluptatum eos error sapiente saepe
+				veritatis voluptatem ex nemo quos sunt tempora provident. Sit
+				maiores reprehenderit nam blanditiis sequi, quos quod error?
+				Eveniet ipsa veniam praesentium obcaecati mollitia maxime eius
+				possimus similique. Id, magni adipisci sapiente tempora
+				architecto quia incidunt, accusantium eius, iste alias obcaecati
+				ipsum quisquam eaque voluptates iure assumenda recusandae
+				ducimus exercitationem sit ullam reprehenderit non facere
+				consectetur? Vero eligendi aperiam ad sed molestias quidem
+				dolorem, voluptatum officia excepturi, labore sint magnam amet
+				porro cupiditate fugiat quasi, quaerat odit iure. Quidem
+				voluptatibus molestiae nisi accusamus tempora perspiciatis
+				incidunt aliquam ab deserunt eum tenetur, iusto non iure magni
+				inventore consequuntur, ipsum, corrupti esse facere asperiores
+				animi sit maxime modi! Accusamus, alias illo? Eaque similique
+				tenetur doloremque illo animi quod, ipsum quibusdam porro
+				tempora. Eveniet, provident illo suscipit error officia enim
+				iusto explicabo maiores aliquid! Doloribus repellendus ea, saepe
+				rerum nulla assumenda odit tempora quam, temporibus amet
+				similique eaque, voluptatibus facere ab libero ipsam cum hic
+				alias? Facere inventore quod vel, ipsum perferendis id quos
+				alias eligendi saepe iste quidem. Voluptatibus illum, commodi
+				architecto exercitationem placeat voluptates accusantium
+				consequatur maiores? Consectetur quidem expedita hic, dicta cum
+				quisquam nulla quia laudantium vitae reiciendis eaque, ab aut
+				impedit rem modi dolorem, beatae repudiandae! Rem iure, libero
+				cupiditate impedit at provident blanditiis modi ea, amet tempora
+				nobis illo molestias, neque quasi necessitatibus. Incidunt,
+				dicta assumenda? Perferendis corporis dignissimos temporibus
+				quaerat quae nisi beatae explicabo iure, quas distinctio!
+				Corporis dicta laboriosam modi id! Nihil perferendis quos quas
+				suscipit nulla consequatur labore voluptates hic enim, facere
+				temporibus quia totam veritatis praesentium consectetur eum
+				officiis omnis. Totam iure harum incidunt velit modi nemo
+				tempore perferendis, ut et repellat nesciunt officiis odit
+				impedit quos quod ab saepe illum pariatur ipsum deleniti.
+				Cupiditate deserunt ipsa dolores illo repellendus quis magni
+				impedit earum! Deleniti veritatis quia adipisci est aut. Iusto
+				voluptatibus deleniti quos voluptate veritatis, dignissimos
+				repudiandae deserunt earum sequi architecto, ratione quaerat
+				corrupti inventore velit adipisci eaque. Nesciunt recusandae
+				dolorum repudiandae, doloribus hic distinctio. Placeat earum
+				delectus praesentium hic debitis incidunt, eaque pariatur
+				repudiandae ipsa voluptatibus dignissimos quasi voluptates,
+				excepturi, at veniam odio laudantium quaerat temporibus.
+				Cupiditate, eaque aliquid mollitia, consequuntur dignissimos
+				quos nobis delectus eveniet explicabo beatae odio animi. Saepe
+				ab excepturi nihil recusandae et aut id atque quaerat vero,
+				quisquam, architecto enim vel quam. Deleniti voluptatibus facere
+				illo alias dolore quas vero reiciendis nemo odit doloribus et
+				quam distinctio aspernatur, ipsa quia tempora quis harum,
+				quaerat laboriosam accusamus dolores cupiditate libero.
+				Temporibus molestiae illo commodi doloremque. Quos aliquid
+				veritatis ipsum tempore excepturi corporis quia nihil. Possimus
+				commodi velit, quasi illo, voluptate a dolorum non eius beatae
+				eum nobis quos! Nam incidunt quidem neque sint. Modi, sunt
+				similique. Eligendi cumque veniam quis neque saepe ducimus ad,
+				tempore cum aut inventore quos, ab maiores perferendis omnis
+				reprehenderit esse ipsam autem nam soluta alias enim? Deserunt
+				sed asperiores exercitationem non a quas quia eligendi odit
+				natus consequatur aspernatur, laboriosam nulla iste id expedita
+				quasi veritatis repudiandae dolore ut. Veniam asperiores
+				praesentium architecto, optio vero qui consequatur atque. Libero
+				id explicabo mollitia, necessitatibus temporibus magni earum
+				unde exercitationem molestias labore quod rerum aliquam officia
+				corrupti inventore qui maiores accusantium quibusdam placeat,
+				eligendi ipsum natus veritatis! Possimus, recusandae praesentium
+				vero temporibus perferendis consequuntur esse odit fugiat
+				explicabo quisquam facere numquam animi culpa nisi soluta
+				molestias officia reiciendis delectus natus. Fugiat, asperiores
+				voluptates distinctio animi explicabo quae quibusdam nobis
+				provident atque unde eligendi illum molestiae quisquam velit
+				quos! Eligendi ullam aliquam quaerat, exercitationem labore
+				corporis nihil alias sed asperiores commodi excepturi placeat
+				beatae. A, odit? Molestias facilis ipsa sunt. Cumque quas
+				consequatur perspiciatis sequi saepe aperiam, mollitia eius odio
+				praesentium voluptatum, illo libero dolorum maxime est ex
+				tempore beatae velit facilis eum necessitatibus corrupti
+				quisquam! Quis impedit inventore fugit architecto perspiciatis
+				neque quod labore repellendus totam eum similique assumenda
+				sapiente quae, excepturi accusantium sequi maiores mollitia
+				doloremque. Sint saepe non accusamus veritatis deserunt libero
+				cumque doloribus quasi amet, quas quidem iure harum.
+				Consectetur, praesentium quae rem aperiam, dignissimos ullam
+				porro veniam, placeat quibusdam perferendis vitae iste a
+				reiciendis numquam similique sit suscipit qui ut? Ullam
+				temporibus molestiae, repellendus quod molestias porro laborum
+				fugit reprehenderit magnam similique a odio tempore, incidunt,
+				esse magni sapiente? Obcaecati illum voluptas error! Mollitia
+				minus quisquam voluptate hic nisi assumenda dignissimos ut
+				rerum? Ea explicabo, animi voluptate est dolore quidem ullam
+				velit tempora. Nemo hic consequatur accusamus est facere cumque,
+				debitis sunt totam beatae facilis, qui mollitia incidunt at
+				doloremque similique quos sequi porro asperiores, laudantium
+				eveniet quam! Odio adipisci cum, officia labore vero quis
+				aspernatur qui commodi sit inventore aperiam, tenetur dolor
+				sapiente deserunt eveniet doloribus! Eveniet, dignissimos ut est
+				tempore delectus culpa tempora, sapiente numquam ratione dolor
+				iusto suscipit hic dolorum minima. Sit voluptatem optio tempora
+				repudiandae quis, molestiae atque. Velit repellendus dicta
+				dolores fugit reprehenderit iure, repellat sint non quas eum
+				ducimus omnis, repudiandae doloremque perferendis error pariatur
+				debitis? Perspiciatis, enim?
+			</div>
+		</section>
 		<!-- jQuery Script -->
 		<script src="js/jquery-3.7.1.min.js"></script>
 		<!-- Main Script -->
