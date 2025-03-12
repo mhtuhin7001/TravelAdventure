@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/input.css" />
 	</head>
 
-	<body class="text-sm bg-black text-white">
+	<body class="bg-black text-white">
 		<!-- Header -->
 		<header class="fixed w-full z-[999]">
 			<div
@@ -97,73 +97,105 @@
 
 		<!-- Home Hero Section -->
 		<section id="home-hero-slider">
+			<!-- Hero Slider -->
 			<div class="hero-slider relative overflow-hidden w-screen h-screen">
-				<div class="hero-slide-lists">
+				<!-- Hero Slide Lists -->
+				<div
+					class="hero-slide-lists after:content-[''] after:absolute after:w-screen after:max-w-5xl after:h-3/4 after:bg-[url(/images/home-slider-model.png)] after:bg-cover after:pointer-events-none after:bg-top after:bottom-0 after:left-1/2 after:animate-showmodel"
+				>
 					<div
-						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 active"
+						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto active"
 					>
 						<div
-							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl"
+							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000"
 							style="--url: url('images/home-slider-1.jpg')"
 						></div>
-						<div class="slide-content">
-							<h2>SLIDER IMAGE MAGIC</h2>
-							<p>
+						<div
+							class="slide-content absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] md:top-1/4 lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5"
+						>
+							<h2
+								class="text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em]"
+							>
+								SLIDER IMAGE MAGIC
+							</h2>
+							<p class="text-sm md:text-base lg:text-lg">
 								Nulla magna irure incididunt irure nisi laboris
 								adipisicing adipisicing ad aliquip exercitation
 								sit duis.
 							</p>
-							<p>
+							<p
+								class="text-sm flex items-end pb-6 md:text-base lg:text-lg"
+							>
 								Ex irure minim eiusmod tempor cillum consectetur
 								ullamco.
 							</p>
 						</div>
 					</div>
 					<div
-						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0"
+						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto"
 					>
 						<div
-							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl"
+							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000"
 							style="--url: url('images/home-slider-2.jpg')"
 						></div>
-						<div class="slide-content">
-							<h2>SLIDER IMAGE MAGIC</h2>
-							<p>
+						<div
+							class="slide-content absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5"
+						>
+							<h2
+								class="text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em]"
+							>
+								SLIDER IMAGE MAGIC
+							</h2>
+							<p class="text-sm md:text-base lg:text-lg">
 								Nulla magna irure incididunt irure nisi laboris
 								adipisicing adipisicing ad aliquip exercitation
 								sit duis.
 							</p>
-							<p>
+							<p
+								class="text-sm flex items-end pb-6 md:text-base lg:text-lg"
+							>
 								Ex irure minim eiusmod tempor cillum consectetur
 								ullamco.
 							</p>
 						</div>
 					</div>
 					<div
-						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0"
+						class="hero-slide absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto"
 					>
 						<div
-							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl"
+							class="slider-image relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000"
 							style="--url: url('images/home-slider-3.jpg')"
 						></div>
-						<div class="slide-content">
-							<h2>SLIDER IMAGE MAGIC</h2>
-							<p>
+						<div
+							class="slide-content absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5"
+						>
+							<h2
+								class="text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em]"
+							>
+								SLIDER IMAGE MAGIC
+							</h2>
+							<p class="text-sm md:text-base lg:text-lg">
 								Nulla magna irure incididunt irure nisi laboris
 								adipisicing adipisicing ad aliquip exercitation
 								sit duis.
 							</p>
-							<p>
+							<p
+								class="text-sm flex items-end pb-6 md:text-base lg:text-lg"
+							>
 								Ex irure minim eiusmod tempor cillum consectetur
 								ullamco.
 							</p>
 						</div>
 					</div>
 				</div>
+				<!-- Hero Slider Navigation -->
 				<div
-					class="hero-slider-nav absolute w-[90vw] max-w-[1200px] flex justify-between left-1/2 bottom-8 -translate-x-1/2"
+					class="hero-slider-nav absolute w-[80vw] max-w-[1200px] flex justify-between left-1/2 bottom-7 -translate-x-1/2 md:w-[90vw] lg:bottom-9"
 				>
-					<button id="slide-prev" class="cursor-pointer">
+					<button
+						id="slide-prev"
+						class="cursor-pointer [.disabled]:opacity-0 [.disabled]:pointer-events-none"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -179,7 +211,10 @@
 							/>
 						</svg>
 					</button>
-					<button id="slide-next" class="cursor-pointer">
+					<button
+						id="slide-next"
+						class="cursor-pointer [.disabled]:opacity-0 [.disabled]:pointer-events-none"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
