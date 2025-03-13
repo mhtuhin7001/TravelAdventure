@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "vite",
-		"build": "tailwindcss -i css/input.css -o ./css/style.css",
+		"build": "tailwindcss -i /css/input.css -o dep/style.css",
 		"dev": "vite build"
 	},
 	"repository": {
