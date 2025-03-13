@@ -1,8 +1,8 @@
 // Mobile Menu
 $(document).ready(function () {
-	$("#mobile-btn").on("click", function () {
+	$("#mobile-menu-btn").on("click", function () {
 		$("header").toggleClass("h-screen bg-[#0008] backdrop-blur-sm");
-		$("#mobile-btn").toggleClass("active");
+		$("#mobile-menu-btn").toggleClass("active");
 		$("#main-menu").toggleClass("max-h-screen");
 	});
 });

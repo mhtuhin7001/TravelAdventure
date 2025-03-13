@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @import "tailwindcss";
 
 @theme {
@@ -12,85 +10,81 @@
 		}
 	}
 }
-:root {
-	--diameter: 1432px;
-}
-.menu-item {
+
+#main-menu .menu-item {
 	@apply font-poppins uppercase text-sm font-semibold py-2.5 cursor-pointer hover:bg-[#fff4] hover:transition-colors hover:duration-300 md:hover:text-gray-200 md:hover:bg-transparent;
 }
-.menu-item a {
+#main-menu .menu-item a {
 	@apply block;
 }
-.hero-slide {
+.hero-slider .hero-slide {
 	@apply absolute flex justify-center items-center inset-0 duration-1000 pointer-events-none opacity-0 [.active]:opacity-100 [.active]:pointer-events-auto;
 }
-.slider-image {
+.hero-slide .slide-image {
 	@apply relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000;
 }
-.slide-content {
-	@apply absolute w-max max-w-full font-poppins uppercase text-lg grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] md:top-1/4 lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5;
+.hero-slide .slide-content {
+	@apply absolute w-max max-w-full uppercase grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] md:top-1/4 lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5;
 }
-.slide-content-title {
+.hero-slide .slide-content-title {
 	@apply text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em];
 }
-.slide-content-subtitle {
-	@apply text-sm flex items-end pb-6 md:text-base lg:text-lg;
+.hero-slide .slide-content-describe {
+	@apply font-poppins text-sm md:text-base lg:text-lg;
+}
+.hero-slide .slide-content-subtitle {
+	@apply flex items-end pb-6;
 }
 
-/* Header */
-#mobile-btn.active div:first-child,
-#mobile-btn.active div:last-child {
-	@apply rotate-45;
-	transform: translate(-8px, 11px);
+/** Header **/
+/* Mobile Menu Button */
+#mobile-menu-btn.active div:first-child {
+	transform: rotate(45deg) translate(-8px, 11px);
 }
-#mobile-btn.active div:nth-child(2) {
+#mobile-menu-btn.active div:nth-child(2) {
 	@apply -rotate-45;
 }
-#mobile-btn.active div:last-child {
-	transform: translate(-4px, -3px);
+#mobile-menu-btn.active div:last-child {
+	transform: rotate(45deg) translate(-4px, -3px);
 }
 
 /* Home Hero Section */
 /* Hero Slider */
-.hero-slider .hero-slide-lists .hero-slide .slide-content {
+.hero-slide .slide-content {
+	--diameter: 1432px;
 	text-shadow: 0 0 80px #000;
 }
-.hero-slider .hero-slide-lists .hero-slide .slider-image::before,
-.hero-slider .hero-slide-lists .hero-slide .slider-image::after {
+.hero-slide .slide-image::before,
+.hero-slide .slide-image::after {
 	transform: translate(-50%, -50%) rotate(-120deg);
 }
-.hero-slider .hero-slide-lists .hero-slide .slider-image::after {
+.hero-slide .slide-image::after {
 	transform: translate(-50%, -50%) rotate(-170deg);
 }
 /* Active Hero Slide  */
-.hero-slider .hero-slide.active .slider-image {
+.hero-slide.active .slide-image {
 	@apply transform rotate-0 blur-none;
 }
-.hero-slider .hero-slide.active .slider-image::before,
-.hero-slider .hero-slide.active .slider-image::after {
+.hero-slide.active .slide-image::before,
+.hero-slide.active .slide-image::after {
 	@apply transform -translate-1/2 rotate-0;
 }
-.hero-slider .hero-slide-lists .hero-slide.active .slide-content h2 {
+.hero-slide.active .slide-content h2 {
 	@apply transform translate-y-0;
 }
-.hero-slider .hero-slide-lists .hero-slide.active ~ .hero-slide {
+.hero-slide-lists .hero-slide.active ~ .hero-slide {
 	@apply opacity-0;
 }
-.hero-slider .hero-slide.active ~ .hero-slide .slider-image {
+.hero-slide.active ~ .hero-slide .slide-image {
 	transform: rotate(60deg);
 }
-.hero-slider .hero-slide.active ~ .hero-slide .slider-image::before {
+.hero-slide.active ~ .hero-slide .slide-image::before {
 	transform: translate(-50%, -50%) rotate(120deg);
 }
-.hero-slider .hero-slide.active ~ .hero-slide .slider-image::after {
+.hero-slide.active ~ .hero-slide .slide-image::after {
 	transform: translate(-50%, -50%) rotate(170deg);
 }
-.hero-slider
-	.hero-slide-lists
-	.hero-slide.active
-	~ .hero-slide
-	.slide-content
-	h2 {
+.hero-slide.active ~ .hero-slide .slide-content h2 {
 	@apply transform translate-y-full;
 }
 .hero-slider .hero-slide-lists::after {

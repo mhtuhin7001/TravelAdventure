@@ -4,23 +4,25 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Travel Adventure</title>
-		<link rel="shortcut icon" href="images/Logo.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/font.css" />
 		<!-- Main Style -->
-		<link rel="stylesheet" href="css/input.css" />
+		<link rel="stylesheet" href="/css/input.css" />
 	</head>
-
 	<body class="overflow-x-hidden bg-black text-white">
 		<!-- Header -->
 		<header class="fixed w-full h-14 transition-all duration-500 z-[999]">
 			<div
 				class="container flex flex-wrap items-center mx-auto px-2.5 py-2 transition-all duration-500 md:px-3.5 md:justify-between"
 			>
-				<a href="index.html" class="site-logo me-auto md:me-0"
+				<!-- Site Logo -->
+				<a href="/index.html" class="site-logo me-auto md:me-0"
 					><img
-						src="images/Logo.png"
+						src="/images/logo.png"
 						class="h-14 transition-all duration-500"
 						alt="Site Logo"
 				/></a>
+				<!-- Header Search -->
 				<form action="" role="search" class="relative md:order-2">
 					<button
 						type="button"
@@ -47,8 +49,9 @@
 						placeholder="Type to Search..."
 					/>
 				</form>
+				<!-- Mobile Menu Button -->
 				<div
-					id="mobile-btn"
+					id="mobile-menu-btn"
 					class="size-7 flex flex-col justify-center items-end gap-1.5 ms-2.5 cursor-pointer transition-all duration-500 ease-in-out md:hidden peer"
 				>
 					<div
@@ -61,6 +64,7 @@
 						class="w-5 h-0.5 rounded-xs bg-white transition-all duration-500 ease-[cubic-bezier(0.075, 0.82, 0.165, 1)]"
 					></div>
 				</div>
+				<!-- Main Menu -->
 				<ul
 					id="main-menu"
 					class="basis-full overflow-hidden max-h-0 text-center pt-2.5 transition-all duration-400 md:basis-auto md:max-h-max md:flex md:justify-center md:gap-6 md:pt-0"
@@ -86,24 +90,33 @@
 			<!-- Hero Slider -->
 			<div class="hero-slider relative overflow-hidden w-screen h-screen">
 				<!-- Hero Slide Lists -->
+				<style>
+					.hero-slide-lists::after {
+						background-image: url("/images/home-slider-model.png");
+					}
+				</style>
 				<div
-					class="hero-slide-lists after:content-[''] after:absolute after:w-screen after:max-w-5xl after:h-3/4 after:bg-[url(/images/home-slider-model.png)] after:bg-cover after:pointer-events-none after:bg-top after:bottom-0 after:left-1/2 after:animate-showmodel"
+					class="hero-slide-lists after:content-[''] after:absolute after:w-screen after:max-w-5xl after:h-3/4 after:bg-cover after:pointer-events-none after:bg-top after:bottom-0 after:left-1/2 after:animate-showmodel"
 				>
 					<div class="hero-slide active">
 						<div
-							class="slider-image"
-							style="--url: url('images/home-slider-1.jpg')"
+							class="slide-image"
+							style="--url: url('/images/home-slider-1.jpg')"
 						></div>
 						<div class="slide-content">
 							<h2 class="slide-content-title">
 								Explore Dream Discover
 							</h2>
-							<p class="text-sm md:text-base lg:text-lg">
+							<p
+								class="text-sm md:text-base lg:text-lg slide-content-describe"
+							>
 								Set off on an adventure, imagine the impossible,
 								and uncover the hidden wonders waiting to be
 								discovered—your journey starts now.
 							</p>
-							<p class="slide-content-subtitle">
+							<p
+								class="slide-content-subtitle slide-content-describe"
+							>
 								We provide journeys that inspire and ignite your
 								wanderlust.
 							</p>
@@ -111,8 +124,8 @@
 					</div>
 					<div class="hero-slide">
 						<div
-							class="slider-image"
-							style="--url: url('images/home-slider-2.jpg')"
+							class="slide-image"
+							style="--url: url('/images/home-slider-2.jpg')"
 						></div>
 						<div class="slide-content">
 							<h2 class="slide-content-title">
@@ -131,8 +144,8 @@
 					</div>
 					<div class="hero-slide">
 						<div
-							class="slider-image"
-							style="--url: url('images/home-slider-3.jpg')"
+							class="slide-image"
+							style="--url: url('/images/home-slider-3.jpg')"
 						></div>
 						<div class="slide-content">
 							<h2 class="slide-content-title">
