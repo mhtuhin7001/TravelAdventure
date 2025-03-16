@@ -12,7 +12,7 @@
 }
 
 #main-menu .menu-item {
-	@apply font-poppins uppercase text-sm font-semibold py-2.5 cursor-pointer hover:bg-[#fff4] hover:transition-colors hover:duration-300 md:hover:text-gray-200 md:hover:bg-transparent;
+	@apply font-poppins uppercase text-sm font-semibold text-white py-2.5 cursor-pointer hover:bg-[#fff4] hover:transition-colors hover:duration-300 md:hover:text-gray-200 md:hover:bg-transparent;
 }
 #main-menu .menu-item a {
 	@apply block;
@@ -24,7 +24,7 @@
 	@apply relative size-(--diameter) bg-(image:--url) bg-[length:var(--diameter)_var(--diameter)] bg-center rounded-full shrink-0 -rotate-[60] duration-1000 blur-2xl before:content-[''] before:absolute before:size-[70%] before:bg-[linear-gradient(to_right,#0004,#0004),var(--url)] before:bg-[length:var(--diameter)_var(--diameter)] before:bg-center before:rounded-full before:top-1/2 before:left-1/2 before:duration-1000 after:content-[''] after:absolute after:size-[30%] after:bg-(image:--url) after:bg-[length:var(--diameter)_var(--diameter)] after:bg-center after:border-3 after:border-[#fff2] after:rounded-full after:top-1/2 after:left-1/2 after:duration-1000;
 }
 .hero-slide .slide-content {
-	@apply absolute w-max max-w-full uppercase grid grid-cols-[80%] gap-5 justify-center top-14 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] md:top-1/4 lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5;
+	@apply absolute w-max max-w-full uppercase text-white grid grid-cols-[80%] gap-5 justify-center top-16 left-1/2 -translate-x-1/2 md:grid-cols-[repeat(2,300px)] sm:top-1/4 lg:grid-cols-[repeat(2,400px)] lg:gap-20 lg:top-1/5;
 }
 .hero-slide .slide-content-title {
 	@apply text-8xl font-bebas leading-[0.9em] transform -translate-y-full transition-transform duration-1000 row-start-1 row-end-3 md:text-9xl lg:text-[10em];
